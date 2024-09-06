@@ -4,6 +4,18 @@
   animation: gradient-animation 18s ease infinite;
 }
 
+.gradiant-color-app-dev {
+  background: linear-gradient(300deg, #6499e9, #9eddff, #a6f6ff, #befff7);
+}
+
+.gradiant-color-digital-transformations {
+  background: linear-gradient(300deg, #424874, #a6b1e1, #dcd6f7, #f4eeff);
+}
+
+.gradiant-color-business-expansion {
+  background: linear-gradient(300deg, #97dbae, #c3e5ae, #f1e1a6, #f4bbbb);
+}
+
 @keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
@@ -27,21 +39,37 @@
   border-radius: 50%;
 }
 
-
 .nav-link {
-      color: black !important; /* Important to override Bootstrap's default styles */
- }
+  color: black !important; /* Important to override Bootstrap's default styles */
+}
 
- .nav-link.active {
-   background-color: #dfd0b8 !important; /* Important to override Bootstrap's default styles */
-  }
+.nav-link.active {
+  background-color: #dfd0b8 !important; /* Important to override Bootstrap's default styles */
+}
 
-
-
-  #itd2-header .service-experience p {
+#itd2-header .service-experience p {
   margin: 0px 12px; /* Adds some spacing above and below the text */
   font-weight: 600;
   font-size: 2rem;
   color: #1a5286 !important;
 }
 
+.more-link {
+  display: inline-block;
+  padding: 0.15rem 0.3rem;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white !important; /* Ensure white color */
+  text-decoration: none;
+  font-size: 0.6rem;
+}
+
+.more-link:hover {
+  background-color: #0056b3;
+  color: white !important; /* Ensure white color */
+}
+
+/* Center align all <h3> headers inside columns */
+h3.text-body-emphasis {
+  text-align: center;
+}
