@@ -11,15 +11,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3 # Updated to the latest version
 
-    - name: Set up Google Cloud SDK
-      uses: google-github-actions/setup-gcloud@v1
-      with:
-        project_id: itd2-website  # Replace with your actual Google Cloud project ID
-        service_account_key: ${{ secrets.GCP_SA_KEY }}
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v1 # Use the correct authentication action
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }} # Use the secret for your service account key
 
-    - name: Copy files to GCS
-      run: gsutil -m cp -r * gs://www.itd2.net
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v1 # Correct usage without service_account_key
+        with:
+          project_id: itd2-website # Replace with your actual Google Cloud project ID
 
+      - name: Copy files to GCS
+        run: gsutil -m cp -r * gs://www.itd2.net
