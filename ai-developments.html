@@ -11,6 +11,34 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- Add some custom styles to enforce alignment -->
+    <style>
+      .feature-image {
+        height: 200px; /* Fixed height for all images */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .feature-image img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+      }
+      
+      .feature-content {
+        margin-top: 1rem;
+      }
+      
+      /* Adjust the font size for the long title */
+      .smaller-title {
+        font-size: 1.6rem !important; /* Reduced from fs-2 (2rem) */
+        line-height: 1.2;
+        min-height: 4rem; /* Ensure consistent height for all titles */
+        display: flex;
+        align-items: center;
+      }
+    </style>
   </head>
 
   <body class="gradient-background gradiant-color-app-dev">
@@ -46,50 +74,52 @@
 
     <section id="ai-development-features">
       <div class="container px-4">
-        <div class="row g-4 py-5">
+        <div class="row py-5">
+          <!-- First column -->
           <div class="col-lg-4">
-            <div
-              class="d-flex flex-column align-items-center justify-content-center"
-            >
-              <div class="text-body-emphasis fs-4 flex-shrink-0 mb-3">
+            <div class="card h-100 border-0 bg-transparent">
+              <div class="feature-image">
                 <img
                   src="./Symbols/ITD2-ApplicationDevelopment_Programming_Icon_v2.png"
-                  alt="AI Safety & Evaluation"
-                  style="width: 100%"
+                  alt="AI Model Evaluation"
+                  class="img-fluid"
                 />
               </div>
-              <div>
-                <h3 class="fs-2 text-body-emphasis">AI Safety & Evaluation</h3>
+              <div class="card-body feature-content">
+                <h3 class="smaller-title text-body-emphasis">AI Model Evaluation & Prompt Engineering</h3>
                 <ul>
                   <li>
-                    <strong>Multi-dimensional evaluation frameworks:</strong> Apply complex frameworks to analyze and optimize language model outputs with the ultimate goal: maximize response helpfulness while avoiding harm.
+                    <strong>Prompt Engineering Strategies:</strong> Design complex strategies to evaluate advanced language models across computer systems, software engineering, and distributed architectures domains.
                   </li>
                   <li>
-                    <strong>Prompt Engineering:</strong> Design and implement strategies that optimize language model outputs for safety and helpfulness.
+                    <strong>Expert-Level Reasoning Tasks:</strong> Develop challenging tasks for science and engineering disciplines while maintaining safety and objectivity standards.
                   </li>
                   <li>
-                    <strong>Response Evaluation:</strong> Review and refine model responses, carefully balancing competing constraints to enhance helpfulness while maintaining safety.
+                    <strong>Multilingual Code Evaluation:</strong> Create French/English code evaluation prompts to assess model performance across diverse software engineering scenarios.
                   </li>
                   <li>
-                    <strong>Comprehensive Assessment:</strong> Evaluate AI task submissions against established frameworks, provide detailed feedback, and assign grades following guidelines.
+                    <strong>Comprehensive Assessment:</strong> Review model outputs against safety and technical benchmarks, providing actionable feedback and final evaluations.
+                  </li>
+                  <li>
+                    <strong>LLM Safety Frameworks:</strong> Contribute to improvements through systematic prompt-based testing and failure mode analysis.
                   </li>
                 </ul>
               </div>
             </div>
           </div>
+          
+          <!-- Second column -->
           <div class="col-lg-4">
-            <div
-              class="d-flex flex-column align-items-center justify-content-center"
-            >
-              <div class="text-body-emphasis fs-4 flex-shrink-0 mb-3">
+            <div class="card h-100 border-0 bg-transparent">
+              <div class="feature-image">
                 <img
                   src="./Symbols/ITD2-ApplicationDevelopment_Technologies_Icon_v5.png"
                   alt="AI-Powered Applications"
-                  style="width: 100%"
+                  class="img-fluid"
                 />
               </div>
-              <div>
-                <h3 class="fs-2 text-body-emphasis">AI-Powered Applications</h3>
+              <div class="card-body feature-content">
+                <h3 class="smaller-title text-body-emphasis">AI-Powered Applications</h3>
                 <ul>
                   <li>
                     <strong>Digital Humanities Research Platform:</strong> Leveraging advanced NLP libraries (GATE, NLTK, spaCy) for reading acceleration and statistical analysis of complex texts.
@@ -107,19 +137,19 @@
               </div>
             </div>
           </div>
+          
+          <!-- Third column -->
           <div class="col-lg-4">
-            <div
-              class="d-flex flex-column align-items-center justify-content-center"
-            >
-              <div class="text-body-emphasis fs-4 flex-shrink-0 mb-3">
+            <div class="card h-100 border-0 bg-transparent">
+              <div class="feature-image">
                 <img
                   src="./Symbols/ITD2-ApplicationDevelopments_DevOps_Icons_v2.png"
                   alt="Development Technologies"
-                  style="width: 100%"
+                  class="img-fluid"
                 />
               </div>
-              <div>
-                <h3 class="fs-2 text-body-emphasis">Development Technologies</h3>
+              <div class="card-body feature-content">
+                <h3 class="smaller-title text-body-emphasis">Development Technologies</h3>
                 <ul>
                   <li>
                     <strong>Programming:</strong> Python for backend, data analysis, and AI integration; JavaScript/React for interactive frontends; OOD for modular, maintainable applications.
